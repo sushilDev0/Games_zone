@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+   
+    <style>
+      :root{
+    background-color: #d8d4d4 ;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+form{
+    display: grid;
+    margin: 1.5rem 1.5rem;
+}
+
+fieldset {
+    border: 2px solid blue;
+    border-radius: 10px;
+}
+
+p,label{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+}
+
+input{
+
+    padding:.5rem;
+    border-radius: 10px;
+    
+}
+
+button {  
+   
+    
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: black;
+    padding: .5rem;
+    border-radius: 10px;
+}
+    </style>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          // Generate a random number between 1 and 10
+          const storedNumber = Math.floor(Math.random() * 10) + 1; // 1 to 10
+          const resultElement = document.getElementById('result');
+  
+          document.querySelector('form').addEventListener('submit', function(event) {
+              event.preventDefault();
+              const guessedNumber = Number(document.querySelector('input').value);
+  
+              if (guessedNumber === storedNumber) {
+                  resultElement.textContent = "You win! The number was " + storedNumber + ".";
+              } else {
+                  resultElement.textContent = "Try again! The number was " + storedNumber + ".";
+              }
+          });
+      });
+  </script>
+  
+</head>
+<body>
+    <fieldset>
+        <form>
+            <label for="number">Guess any number between 1 to 10</label>
+            <input type="number" name="number" id="number" />
+            <button type="submit">Submit</button>
+            <p id="result"></p>
+        </form>
+    </fieldset>
+</body>
+</html>
