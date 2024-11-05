@@ -18,7 +18,7 @@ function App() {
 
     // Check for a tie
     if (playerChoice === cpuChoice) {
-      setResult(`It's a tie! CPU chose ${cpuChoice}`);
+      setResult(`It's a tie! CPU chooses ${cpuChoice}`);
       setResultColor("text-blue-500"); // Blue color for tie
       return;
     }
