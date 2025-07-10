@@ -1,0 +1,115 @@
+Tick tac Toe Project Report
+
+
+
+📘 1. Project Title
+Dynamic Tic Tac Toe Game Using React.js
+
+🧑‍💻 2. Author
+
+Sushil Kumar Mahato
+Date : 10/7/2025 5:58 pm
+
+
+📝 3. Introduction
+
+This project is a responsive and dynamic version of the classic Tic Tac Toe game, developed using React.js. It allows two players to play turn-by-turn and supports customizable board sizes ranging from 3x3 up to 10x10, extending the traditional game’s flexibility.
+
+The primary goal of this project was to practice React concepts such as component-based architecture, state management using hooks (useState, useEffect), props, conditional rendering, and CSS styling
+
+🧩 4. Features
+
+✅ Dynamic board size (from 3x3 to 10x10)
+
+✅ Alternating player turns (X and O)
+
+✅ Automatic win detection
+
+✅ Draw detection
+
+✅ Game reset button
+
+✅ Responsive, styled UI using CSS and inline styles
+
+
+🏗️ 5. Component Architecture
+
+The app is divided into modular components for maintainability:
+
+📂 Components:
+
+App.jsx: Root component; renders the game and title.
+
+Game.jsx: Handles all core logic, game state, win condition, and dynamic board resizing.
+
+Board.jsx: Receives board data and renders the grid layout using CSS Grid.
+
+Square.jsx: Represents each individual cell. Styled as a button with hover/active effects.
+
+💻 6. Technologies Used
+
+Tool / Technology	Purpose
+React.js	UI development
+JavaScript (ES6+)	Logic and interactivity
+CSS	Styling and responsive layout
+Vite (or React CLI)	Project setup and build
+
+
+📸 Screenshots
+
+[Figure 1: 3x3 Board with a Win]
+Path: ./img/snip.png
+
+[Figure 2: 5x5 Board]
+Path: ./img/snip.png
+
+[Figure 3: 4x4 Board]
+Path: ./img/snip3.png
+
+To view these images, open them from the `img/` folder.
+
+
+
+🧠 9. Learnings / What I Gained
+
+
+Highlight what you learned:
+
+How to lift and manage shared state in React
+
+Efficient board rendering with array mapping
+
+Win/draw condition detection logic
+
+CSS Grid and Flexbox for responsive design
+
+Clean component structuring and reusability
+
+
+🚀 10. Challenges Faced
+
+Showcase your problem-solving skills by mentioning challenges:
+
+Handling win conditions for larger grids
+
+Preventing unnecessary re-renders
+
+Managing dynamic board creation based on user input
+
+Keeping logic scalable and clean for 3x3 to 10x10 boards
+
+
+💡 11. Improvements / Next Steps
+
+
+If not already mentioned earlier, list:
+
+🎮 Single-player mode with AI (Minimax)
+
+🎨 Theme customizer (light/dark mode)
+
+🧩 Animation for cell updates
+
+🕹️ Keyboard navigation
+
+🔁 Move history and undo functionality

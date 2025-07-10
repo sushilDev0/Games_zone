@@ -1,0 +1,42 @@
+.board {
+  --board-size: 3; /* fallback value */
+  grid-template-columns: repeat(var(--board-size), 1fr);
+  grid-template-rows: repeat(var(--board-size), 1fr);
+  /* other styles */
+}
+
+
+
+.board {
+  display: grid;
+  gap: 5px;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 90vmin;  /* max width based on viewport */
+  --board-size: 3; /* fallback if not set */
+  grid-template-columns: repeat(var(--board-size), 1fr);
+  grid-template-rows: repeat(var(--board-size), 1fr);
+}
+
+.square {
+  background-color: #576b5b;
+  border: 2px solid #555;
+  font-size: calc(1.5rem - 0.15rem * (var(--board-size) - 3));
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.square:hover {
+  background-color: #4d5fc4;
+}
+
+.square:active {
+  background-color: #ddd;
+}
