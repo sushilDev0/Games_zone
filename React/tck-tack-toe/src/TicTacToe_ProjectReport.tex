@@ -1,0 +1,128 @@
+% Including necessary LaTeX packages
+\documentclass[a4paper,12pt]{article}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{parskip}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{fontawesome}
+\usepackage{sectsty}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{noto}
+
+% Configuring section fonts and colors
+\sectionfont{\color{blue}\Large\bfseries}
+\subsectionfont{\color{blue}\normalsize\bfseries}
+
+% Setting up hyperlinks
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+}
+
+% Setting document font
+\renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+
+% Creating title page
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    {\Huge\bfseries Dynamic Tic Tac Toe Game Using React.js \par}
+    \vspace{1.5cm}
+    {\Large\bfseries Project Report \par}
+    \vspace{2cm}
+    {\large\itshape Sushil Kumar Mahato \par}
+    \vspace{0.5cm}
+    {\large Date: July 10, 2025 \par}
+    \vspace{2cm}
+    {\large Submitted as part of React.js learning project \par}
+    \vfill
+\end{titlepage}
+
+% Starting main content
+\section{Introduction}
+This project presents a responsive and dynamic version of the classic Tic Tac Toe game, developed using React.js. The application allows two players to engage in turn-based gameplay and supports customizable board sizes ranging from 3x3 to 10x10, enhancing the traditional game’s flexibility. The primary objective was to deepen understanding of React concepts, including component-based architecture, state management with hooks (\texttt{useState}, \texttt{useEffect}), props, conditional rendering, and CSS styling.
+
+\section{Features}
+The Tic Tac Toe game includes the following features:
+\begin{itemize}
+    \item \textbf{Dynamic Board Size}: Supports boards from 3x3 to 10x10.
+    \item \textbf{Alternating Player Turns}: Players alternate between `X' and `O'.
+    \item \textbf{Automatic Win Detection}: Detects winning conditions across rows, columns, and diagonals.
+    \item \textbf{Draw Detection}: Identifies when the game ends in a draw.
+    \item \textbf{Game Reset Button}: Allows restarting the game.
+    \item \textbf{Responsive UI}: Styled using CSS and inline styles for a polished look.
+\end{itemize}
+
+\section{Component Architecture}
+The application is structured into modular components for maintainability and scalability:
+\begin{description}
+    \item[App.jsx] Root component responsible for rendering the game and title.
+    \item[Game.jsx] Manages core logic, game state, win conditions, and dynamic board resizing.
+    \item[Board.jsx] Receives board data and renders the grid layout using CSS Grid.
+    \item[Square.jsx] Represents individual cells, styled as buttons with hover and active effects.
+\end{description}
+
+\section{Technologies Used}
+The project leverages the following technologies:
+\begin{itemize}
+    \item \textbf{React.js}: For building the user interface.
+    \item \textbf{JavaScript (ES6+)}: For game logic and interactivity.
+    \item \textbf{CSS}: For styling and responsive layout.
+    \item \textbf{Vite (or React CLI)}: For project setup and build processes.
+\end{itemize}
+
+\section{Screenshots}
+The following screenshots illustrate the game’s interface:
+\begin{itemize}
+    \item \textbf{Figure 1}: 3x3 Board with a Win (\texttt{./img/snip.png}).
+    \item \textbf{Figure 2}: 5x5 Board (\texttt{./img/snip.png}).
+    \item \textbf{Figure 3}: 4x4 Board (\texttt{./img/snip3.png}).
+\end{itemize}
+To view these images, open them from the \texttt{img/} folder.
+
+\section{Learnings}
+Through this project, the following skills were developed:
+\begin{itemize}
+    \item Lifting and managing shared state in React.
+    \item Efficient board rendering using array mapping.
+    \item Implementing win and draw condition detection logic.
+    \item Utilizing CSS Grid and Flexbox for responsive design.
+    \item Structuring components for reusability and maintainability.
+\end{itemize}
+
+\section{Challenges Faced}
+The development process presented several challenges, showcasing problem-solving skills:
+\begin{itemize}
+    \item \textbf{Win Conditions for Larger Grids}: Adapting logic to handle dynamic board sizes.
+    \item \textbf{Preventing Unnecessary Re-renders}: Optimizing React component updates.
+    \item \textbf{Dynamic Board Creation}: Managing user input for variable board sizes.
+    \item \textbf{Scalable Logic}: Ensuring clean and maintainable code for boards from 3x3 to 10x10.
+\end{itemize}
+
+\section{Improvements and Next Steps}
+Future enhancements to the project include:
+\begin{itemize}
+    \item \textbf{Single-Player Mode}: Implementing an AI opponent using the Minimax algorithm.
+    \item \textbf{Theme Customizer}: Adding light and dark mode options.
+    \item \textbf{Animations}: Enhancing cell updates with smooth transitions.
+    \item \textbf{Keyboard Navigation}: Supporting gameplay via keyboard inputs.
+    \item \textbf{Move History and Undo}: Allowing players to review and revert moves.
+\end{itemize}
+
+% Adding footer
+\clearpage
+\begin{center}
+    \vspace*{\fill}
+    \small
+    \textcopyright~2025 Sushil Kumar Mahato. All rights reserved.
+\end{center}
+
+\end{document}
